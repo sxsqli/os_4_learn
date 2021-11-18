@@ -1,0 +1,6 @@
+**.bin
+**.img
+**.o
+**.elf*
+makefont
+font8x16.h
