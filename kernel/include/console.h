@@ -1,17 +1,18 @@
 #ifndef __CONSOLE_H__
 #define __CONSOLE_H__
+
 #include "sheet.h"
 
 struct CONSOLE {
-    struct SHEET *sht;
-    int cur_x, cur_y, cur_c;
-    struct TIMER *timer;
+  struct SHEET *sht;
+  int cur_x, cur_y, cur_c;
+  struct TIMER *timer;
 };
 
 struct FILEHANDLE {
-	char *buf;
-	int size;
-	int pos;
+  char *buf;
+  int size;
+  int pos;
 };
 
 void console_task(struct SHEET *sheet, int memtotal);
@@ -27,8 +28,10 @@ void cmd_exit(struct CONSOLE *cons, int *fat);
 void cmd_start(struct CONSOLE *cons, char *cmdline, int memtotal);
 void cmd_ncst(struct CONSOLE *cons, char *cmdline, int memtotal);
 int cmd_app(struct CONSOLE *cons, int *fat, char *cmdline);
-int *os_api(int edi, int esi, int ebp, int esp, int ebx, int edx, int ecx, int eax);
+int *os_api(int edi, int esi, int ebp, int esp, int ebx, int edx, int ecx,
+            int eax);
 int *inthandler0c(int *esp);
 int *inthandler0d(int *esp);
 void os_api_linewin(struct SHEET *sht, int x0, int y0, int x1, int y1, int col);
+
 #endif

@@ -1,5 +1,6 @@
 #ifndef __ASMLIB_H__
 #define __ASMLIB_H__
+
 void io_hlt(void);
 void io_cli(void);
 void io_sti(void);
@@ -30,4 +31,5 @@ void farcall(int eip, int cs);
 void asm_os_api(void);
 void start_app(int eip, int cs, int esp, int ds, int *tss_esp0);
 void asm_end_app(void);
+
 #endif

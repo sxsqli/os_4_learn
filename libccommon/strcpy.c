@@ -1,8 +1,9 @@
 #include "common.h"
-void strcpy(char *s1, char *s2)
-{
+
+void strcpy(char *s1, char *s2) {
 #ifdef __TEST__
-    ENTER;
+  ENTER;
 #endif
-    while(*s1++ = *s2++);
+  while (*s1++ = *s2++)
+    ;
 }
