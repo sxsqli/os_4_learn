@@ -21,6 +21,7 @@ void keywin_off(struct SHEET *key_win);
 void keywin_on(struct SHEET *key_win);
 void close_console(struct SHEET *sht);
 void close_constask(struct TASK *task);
+int test_add(int a, int b);
 
 /* THIS MUST BE THE FIRST FUNCTION */
 void _start(void) {
@@ -392,3 +393,5 @@ void close_console(struct SHEET *sht) {
   close_constask(task);
   return;
 }
+
+int test_add(int a, int b) { return a + b; }

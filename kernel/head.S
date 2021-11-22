@@ -117,7 +117,9 @@ pipelineflush:
 ; Move floppy A data to 1M
         MOV     ESI, 0xBA00
         MOV     EDI, 0x100000
-        MOV     ECX, (10*18*2*512)
+        MOV     ECX, 0
+        MOV     CL,BYTE [CYLS]
+        IMUL    ECX, 512*18*2
         SHR     ECX,2
         CALL    memcpy
 
