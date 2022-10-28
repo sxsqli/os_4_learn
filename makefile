@@ -68,4 +68,4 @@ clean:
 	$(RM) -f $(empty-image)
 
 run: $(target-image)
-	@qemu-system-i386 -drive file=os.img,if=floppy
+	@qemu-system-i386 -drive file=os.img,format=raw,if=floppy
